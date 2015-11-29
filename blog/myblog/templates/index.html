@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+    {% block title %}login{% endblock%}
+{% load comments %}
+{% block content_body %}
+
+<h1>welcom,{{ username }}</h1>
+<br>
+    {% get_comment_count for comments as comment_count %}
+    <p>This event has {{ comment_count }} comments.</p>
+<a href="http://127.0.0.1:8000/logout">退出</a>
+{% endblock %}

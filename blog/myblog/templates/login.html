@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+    {% block title %}login{% endblock%}
+{% block content_body %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ uf.as_p }}
+    <input type="submit" value="ok">
+</form>
+<br>
+<a href="http://127.0.0.1:8000/register">register</a>
+<br>
+
+{% endblock %}

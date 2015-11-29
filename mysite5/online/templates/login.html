@@ -7,7 +7,13 @@
 <body>
 <h1>登录页面</h1>
 <form method="post" enctype="multipart/form-data">
-    {{ uf.as_p }}
+
+    <div>
+        <label for="">{{ uf.username.label}}</label>
+        {{ uf.username }}</div>
+    <div>
+        <label for="">{{ uf.password.label}} </label>
+        {{ uf.password }}</div>
     <input type="submit" value="ok">
 </form>
 <br>
