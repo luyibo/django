@@ -24,6 +24,7 @@ def register(req):
             if len(filterr)>0:
                 return HttpResponse('existed')
             else:
+
                 User.objects.create(username=username,password=password)
             return HttpResponse('register success')
     else:

@@ -3,7 +3,6 @@ from django.contrib import admin
 # Create your models here.
 class User(models.Model):
     username=models.CharField(max_length=30)
-    header=models.FileField(upload_to='./upload/')
     password=models.CharField(max_length=30)
     def __unicode__(self):
         return self.username
@@ -17,5 +16,4 @@ class BlogAdmin(admin.ModelAdmin):
     list_display = ('title','timestamp')
 
 
-class comments(models.Model):
-    tetx=models.TextField()
+
